@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="tw-pb-5">
     <div class="tw-text-3xl tw-font-medium tw-my-5">Dashboard</div>
     <div class="tw-space-y-2">
       <div class="md:tw-grid lg:tw-grid-cols-4 tw-grid-cols-2 tw tw-gap-2 md:tw-space-y-0 tw-space-y-2">

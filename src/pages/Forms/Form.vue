@@ -1,15 +1,18 @@
 <template>
-    <div class="tw-flex tw-gap-20">
-        <div class="tw-max-w-2xl tw-w-full">
-            <div class="tw-text-3xl tw-font-medium tw-my-5">Forms</div>
-            <p class="tw-font-light tw-text-gray-400 tw-text-xs">
-                Utilities for setting the form an element
-            </p>
+<div class="tw-pb-5">
+    <div class="tw-text-3xl tw-font-medium tw-my-5">Forms</div>
+    <p class="tw-font-light tw-text-gray-400 tw-text-xs">
+        Utilities for setting the form an element
+    </p>
+
+    <div class="md:tw-flex tw-gap-10">
+        <div class="md:tw-w-9/12 tw-space-y-5">
 
             <div class="tw-space-y-5 tw-my-5">
                 <div class="tw-bg-white tw-rounded">
-                    <div class="tw-p-5 tw-p-4 tw-pb-1">
+                    <div class="tw-p-5 tw-pb-1">
                         <div class="tw-font-medium">Basic</div>
+                        
                         <q-form @submit="onSubmit">
                             <div class="tw-my-5 md:tw-grid md:tw-grid-cols-2 tw-gap-5">
                                 <q-input
@@ -29,19 +32,20 @@
                                         val => val > 0 && val < 100 || 'Please type Your real age'
                                     ]"
                                 />
-
                             </div>
-                                <q-toggle v-model="toggle" label="I accept the license and terms" />
+                            <q-toggle v-model="toggle" label="I accept the license and terms" />
                             <div class="tw-mt-5 tw-mb-5">
                                 <q-btn type="submit" color="primary">Submit</q-btn>
                             </div>
                         </q-form>
+
                     </div>
                 </div>
 
                 <div class="tw-bg-white tw-rounded">
-                    <div class="tw-p-5 tw-p-4 tw-pb-1">
+                    <div class="tw-p-5 tw-pb-1">
                         <div class="tw-font-medium">Detail Informations</div>
+                        
                         <q-form>
                             <div class="tw-my-5 md:tw-grid md:tw-grid-cols-2 tw-gap-x-5">
                                 <q-input
@@ -101,18 +105,19 @@
                                 <q-btn type="submit" color="primary">Submit</q-btn>
                             </div>
                         </q-form>
+
                     </div>
                 </div>
 
                 <div class="tw-bg-white tw-rounded">
-                    <div class="tw-p-5 tw-p-4 tw-pb-1">
+                    <div class="tw-p-5 tw-pb-1">
                         <div class="tw-font-medium">Checkout</div>
 
                         <q-form>
-                            <div class="tw-my-5 md tw-gap-y-5">
+                            <div class="tw-my-5">
                                 <q-select outlined v-model="payment" :options="paymentOptions" label="Select Payment" />
 
-                                <div class="tw-grid tw-grid-cols-2 tw-my-3 tw-gap-x-5 tw-gap-y-3">
+                                <div class="md:tw-grid md:tw-grid-cols-2 tw-my-3 q-gutter-sm tw-gap-x-5 tw-gap-y-3">
                                     <q-input outlined v-model="card_name" label="Card Name" />
 
                                     <q-input outlined v-model="card_number" label="Card Number" mask="#### #### #### ####" fill-mask="_">
@@ -120,20 +125,21 @@
                                             <q-icon name="payment" />
                                         </template>
                                     </q-input>
-                                <q-input
-                                    outlined
-                                    v-model="date"
-                                    label="Date"
-                                    mask="## /##"
-                                    fill-mask
-                                />
-                                <q-input
-                                    type="password"
-                                    outlined
-                                    v-model="cvv"
-                                    label="Cvv"
-                                    fill-mask
-                                />
+
+                                    <q-input
+                                        outlined
+                                        v-model="date"
+                                        label="Date"
+                                        mask="## /##"
+                                        fill-mask
+                                    />
+                                    <q-input
+                                        type="password"
+                                        outlined
+                                        v-model="cvv"
+                                        label="Cvv"
+                                        fill-mask
+                                    />
                                 </div>
 
                                 <div class="tw-mt-5">
@@ -141,11 +147,24 @@
                                 </div>
                             </div>
                         </q-form>
+                        
                     </div>
                 </div>
             </div>
+            
+        </div>
+        <div class="md:tw-w-3/12 md">
+            <div class="tw-uppercase tw-font-light tw-text-sm">
+                On This Page
+            </div>
+            <div class="tw-mt-4">
+                <p class="tw-font-light q-ma-none">Basic</p>
+                <p class="tw-font-light q-ma-none">Detail Informations</p>
+                <p class="tw-font-light q-ma-none">Checkout</p>
+            </div>
         </div>
     </div>
+</div>
 </template>
 
 <script>

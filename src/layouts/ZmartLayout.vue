@@ -27,10 +27,10 @@
 
         <div class="tw-space-x-2 flex">
           <q-btn dense flat icon="o_notifications" class="tw-bg-white tw-p-2">
-            <q-menu class="no-shadow" anchor="bottom right" self="top right">
+            <q-menu class="shadow-1" anchor="bottom right" self="top right">
               <q-list bordered separator style="min-width: 150px">
                 
-                <q-item clickable v-ripple class="tw-py-3">
+                <q-item clickable v-ripple class="tw-py-4">
                   <q-item-section avatar>
                     <q-icon color="negative" text-color="white" name="gpp_bad" />
                   </q-item-section>
@@ -57,7 +57,7 @@
           </q-btn>
 
           <div class="tw-flex tw-items-center">
-            <q-btn dense flat class="tw-bg-white tw-py-2 tw-px-3 tw-font-bold md:tw-hidden">AF</q-btn>
+            <q-btn flat class="tw-bg-white tw-py-2 tw-px-3 tw-font-bold md:tw-hidden">AF</q-btn>
             <q-btn flat no-caps class="tw-flex tw-flex-col md">
               <div class="tw-mr-3 ">Azriel Faturrachman</div>
               <q-icon name="expand_more" size="18px"/>
@@ -107,6 +107,9 @@
                 </li>
                 <li>
                   <router-link to="/button" class="tw-no-underline">Button</router-link>
+                </li>
+                <li>
+                  <router-link to="/modal" class="tw-no-underline">Modal</router-link>
                 </li>
               </ul>
             </q-list>

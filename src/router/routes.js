@@ -14,6 +14,7 @@ const routes = [
       { path: '', component: () => import('pages/Dashboard.vue') },
       { path: '/alert', component: () => import('pages/Components/Alert.vue') },
       { path: '/button', component: () => import('pages/Components/Button.vue') },
+      { path: '/modal', component: () => import('pages/Components/Modal.vue') },
       { path: '/forms/input', component: () => import('pages/Forms/Input.vue') },
       { path: '/forms/select', component: () => import('pages/Forms/Select.vue') },
       { path: '/forms/radio', component: () => import('pages/Forms/Radio.vue') },

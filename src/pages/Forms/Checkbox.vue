@@ -1,9 +1,9 @@
 <template>
     <div class="tw-flex tw-gap-20">
         <div class="tw-max-w-2xl tw-w-full">
-            <div class="tw-text-3xl tw-font-medium tw-my-5">Input Text</div>
+            <div class="tw-text-3xl tw-font-medium tw-my-5">Checkbox</div>
             <p class="tw-font-light tw-text-gray-400 tw-text-xs">
-                Utilities for setting the button an element
+                Utilities for setting the checkbox an element
             </p>
 
             <div class="tw-space-y-5">

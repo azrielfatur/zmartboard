@@ -1,12 +1,12 @@
 <template>
     <div class="tw-flex tw-gap-20">
         <div class="tw-max-w-2xl tw-w-full">
-            <div class="tw-text-3xl tw-font-medium tw-my-5">Input Text</div>
+            <div class="tw-text-3xl tw-font-medium tw-my-5">Tables</div>
             <p class="tw-font-light tw-text-gray-400 tw-text-xs">
                 Utilities for setting the button an element
             </p>
 
-            <div class="tw-space-y-5">
+            <div class="tw-space-y-5 tw-my-5">
                 <div class="tw-bg-white tw-rounded">
                     <div class="md:tw-p-5 tw-p-4 tw-pb-1">
                         <div class="tw-font-medium">Basic</div>
@@ -17,6 +17,66 @@
                                 :columns="columns"
                                 row-key="name"
                             />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tw-bg-white tw-rounded">
+                    <div class="md:tw-p-5 tw-p-4 tw-pb-1">
+                        <div class="tw-font-medium">Bordered</div>
+                        <div class="tw-my-5 tw-space-y-5">
+                            <q-table
+                                flat
+                                bordered
+                                title="Users"
+                                :rows="rows"
+                                :columns="columns"
+                                row-key="name"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tw-bg-white tw-rounded">
+                    <div class="md:tw-p-5 tw-p-4 tw-pb-1">
+                        <div class="tw-font-medium">Multiple Selection</div>
+                        <div class="tw-my-5 tw-space-y-5">
+                            <q-table
+                                flat
+                                bordered
+                                title="Users"
+                                :rows="rows"
+                                :columns="columns"
+                                selection="multiple"
+                                v-model:selected="selected"
+                                row-key="name"
+                            >
+                            </q-table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tw-bg-white tw-rounded">
+                    <div class="md:tw-p-5 tw-p-4 tw-pb-1">
+                        <div class="tw-font-medium">Search Filtering</div>
+                        <div class="tw-my-5 tw-space-y-5">
+                            <q-table
+                                flat
+                                bordered
+                                title="Users"
+                                :rows="rows"
+                                :columns="columns"
+                                :filter="filter"
+                                row-key="name"
+                            >
+                                <template v-slot:top-right>
+                                    <q-input borderless dense debounce="300" v-model="filter" placeholder="Search">
+                                    <template v-slot:append>
+                                        <q-icon name="search" />
+                                    </template>
+                                    </q-input>
+                                </template>
+                            </q-table>
                         </div>
                     </div>
                 </div>
@@ -89,6 +149,8 @@ const rows = [
 export default {
     setup() {
         return {
+            selected: ref([]),
+            filter: ref(''),
             columns,
             rows
         }

@@ -21,6 +21,21 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="tw-bg-white tw-rounded">
+                    <div class="md:tw-p-5 tw-p-4 tw-pb-1">
+                        <div class="tw-font-medium">Mini Size</div>
+                        <div class="tw-my-5 tw-max-w-xs tw-space-y-5">
+                            <q-input dense v-model="text" label="Standard" />
+
+                            <q-input dense filled v-model="text" label="Filled" />
+
+                            <q-input dense outlined v-model="text" label="Outlined" />
+
+                            <q-input dense borderless v-model="text" label="Borderless" />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

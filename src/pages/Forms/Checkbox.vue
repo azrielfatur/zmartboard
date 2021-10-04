@@ -11,9 +11,9 @@
                     <div class="md:tw-p-5 tw-p-4 tw-pb-1">
                         <div class="tw-font-medium">Basic</div>
                         <div class="tw-my-5">
-                            <q-checkbox v-model="brand" label="Do you agree with the terms and Codition?" />
-                            <p>Your selected is : <strong class="tw-capitalize">{{ brand ? 'Yes' : 'No' }}</strong></p>
+                            <q-checkbox dense v-model="brand" label="Do you agree with the terms and Codition?" />
                         </div>
+                            <p>Your selected is : <strong class="tw-capitalize">{{ brand ? 'Yes' : 'No' }}</strong></p>
                     </div>
                 </div>
             </div>

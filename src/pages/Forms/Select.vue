@@ -18,6 +18,18 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="tw-bg-white tw-rounded">
+                    <div class="md:tw-p-5 tw-p-4 tw-pb-1">
+                        <div class="tw-font-medium">Mini Size</div>
+                        <div class="tw-my-5 tw-max-w-xs tw-space-y-5">
+                            <q-select dense v-model="selected" :options="options" label="Standard" />
+                            <q-select dense filled v-model="selected" :options="options" label="Filled" />
+                            <q-select dense outlined v-model="selected" :options="options" label="Outlined" />
+                            <q-select dense borderless v-model="selected" :options="options" label="Borderless" />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
